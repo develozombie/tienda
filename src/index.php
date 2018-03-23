@@ -1,4 +1,3 @@
-<img src="img/bcp1.jpg" width="300px" /></br>
 <?php
 phpinfo();
 $file = '/aci/logs/log.txt';
