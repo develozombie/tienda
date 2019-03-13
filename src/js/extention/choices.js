@@ -151,7 +151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      noChoicesText: 'No choices to choose from',
 	      itemSelectText: 'Press to select',
 	      addItemText: function addItemText(value) {
-	        return 'Press Enter to add <b>"' + (0, _utils.stripHTML)(value) + '"</b>';
+	        return 'Presiona Enter para añadir <b>"' + (0, _utils.stripHTML)(value) + '"</b>';
 	      },
 	      maxItemText: function maxItemText(maxItemCount) {
 	        return 'Only ' + maxItemCount + ' values can be added.';
