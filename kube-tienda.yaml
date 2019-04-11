@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: phpappcontainer
+  name: tienda
   labels:
-    app: phpappcontainer
+    app: tienda
 spec:
   ports:
   - name: http
@@ -11,15 +11,15 @@ spec:
     port: 80
     targetPort: 80
   selector:
-    app: phpappcontainer
+    app: tienda
   type: LoadBalancer  
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: phpappcontainer
+  name: tienda
   labels:
-    app: phpappcontainer
+    app: tienda
 spec:
   strategy:
     rollingUpdate:
@@ -29,11 +29,11 @@ spec:
   template:
     metadata:
       labels:
-        app: phpappcontainer
+        app: tienda
     spec:
       containers:
-      - image: joyapu.azurecr.io/phpappcontainer
-        name: phpappcontainer
+      - image: joyapu.azurecr.io/tienda
+        name: tienda
         ports:
         - containerPort: 80
           name: http
@@ -48,11 +48,11 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: phpappcontainer
+  name: tienda
 spec:
   scaleTargetRef:
     kind: Deployment
-    name: phpappcontainer
+    name: tienda
   minReplicas: 2
   maxReplicas: 4
   targetCPUUtilizationPercentage: 70
