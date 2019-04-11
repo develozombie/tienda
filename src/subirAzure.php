@@ -1,10 +1,10 @@
 <?php
 
-$accesskey = "6w7BMvm/O13l3x0pQvTNoEiDPLpgRx0XrQv7llGmDHoPERomZvOm2dlMLc0irpl4+9vy1+KN8K9hIFXfVNZzqA==";
-$storageAccount = 'stgdemoblabla';
-$filetoUpload = realpath('/Users/jyapurv/Onedrive/Codigo/PHPAppContainer/src/img/bcp1.jpg');
+$accesskey = "Gyr5YAWlG4Uqpd+gcjzV7+JxJuxxZSXo3VTqb1gSHA6WQ7hHdQ3WDl9wldRvqH+wMg9eXdvdss4Ralq87eTkww==";
+$storageAccount = 'stgplayground';
+$filetoUpload = realpath('/img/'+$_GET['archivo']);
 $containerName = 'demo';
-$blobName = 'image2.jpg';
+$blobName = $_GET['archivo'];
 $destinationURL = "https://$storageAccount.blob.core.windows.net/$containerName/$blobName";
 
 function uploadBlob($filetoUpload, $storageAccount, $containerName, $blobName, $destinationURL, $accesskey) {
