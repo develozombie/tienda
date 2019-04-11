@@ -2,8 +2,8 @@
 
 $accesskey = "Gyr5YAWlG4Uqpd+gcjzV7+JxJuxxZSXo3VTqb1gSHA6WQ7hHdQ3WDl9wldRvqH+wMg9eXdvdss4Ralq87eTkww==";
 $storageAccount = 'stgplayground';
-$filetoUpload = realpath('/img/'+$_GET['archivo']);
-$containerName = 'demo';
+$filetoUpload = realpath('img/' . $_GET['archivo']);
+$containerName = 'imagenes';
 $blobName = $_GET['archivo'];
 $destinationURL = "https://$storageAccount.blob.core.windows.net/$containerName/$blobName";
 
@@ -58,7 +58,6 @@ function uploadBlob($filetoUpload, $storageAccount, $containerName, $blobName, $
     curl_setopt($ch, CURLOPT_UPLOAD, true); 
     $result = curl_exec($ch);
 
-    echo ('Result');
     print_r($result);
     print_r(curl_error($ch));
 
