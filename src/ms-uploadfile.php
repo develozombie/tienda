@@ -41,5 +41,5 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-header("Location: subirAzure.php");
+header("Location: subirAzure.php?archivo="+$_FILES["fileToUpload"]["name"]);
 ?>
