@@ -11,7 +11,7 @@
     <div class="s004">
       <form action="ms-uploadfile.php" method="post" enctype="multipart/form-data">
         <fieldset>
-          <legend>¿QUÉ ESTAS BUSCANDO?</legend>
+          <legend>Nota <?php echo rand(0,20); ?></legend>
           <div class="inner-form">
             <div class="input-field">
               <input class="form-control" id="choices-text-preset-values" type="file" name="fileToUpload" placeholder="Suba su imagen" />
